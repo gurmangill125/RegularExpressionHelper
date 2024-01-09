@@ -1,0 +1,126 @@
+/* Base (Light Mode) Styles */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f5f5f7;
+    color: #333; /* Base text color for the body */
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    background-color: #e9ecef;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff; 
+    transition: color 0.5s ease; 
+}
+
+/* Dark Mode Button Styles */
+.dark-mode-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+/* Fade-in animation for the Dark Mode Button */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode, .dark-mode h1, .dark-mode button, .dark-mode input, .dark-mode select {
+    background-color: #121212; 
+    color: orange; 
+}
+
+.container.dark-mode {
+    background: #000000;
+    color: orange; 
+}
+
+.dark-mode #result {
+    background-color: #333; 
+    color: orange; 
+}
+
+#cheat-sheet {
+    display: none; 
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+#cheat-sheet ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cheat-sheet li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.highlight {
+    background-color: yellow; 
+    font-weight: bold;
+}

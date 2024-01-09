@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader" class="loader"></div>
+
+    <div class="container">
+        <h1>Regular Expression Helper</h1>
+        <input type="text" id="regex-input" placeholder="Enter your regex">
+        <input type="text" id="string-input" placeholder="Enter string to test">
+        <button id="run-btn">Run</button>
+
+        <div>
+            <label for="flags">Choose flags:</label>
+            <select id="flags">
+                <option value="g">Global</option>
+                <option value="i">Case Insensitive</option>
+                <option value="m">Multiline</option>
+                <option value="s">Sticky</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="functions">Choose RegExp function:</label>
+            <select id="functions">
+                <option value="test">Test</option>
+                <option value="search">Search</option>
+                <option value="match">Match</option>
+            </select>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <div id="highlighted-result"></div>
+    <button id="show-cheat-sheet">Show Regex Cheat Sheet</button>
+    <button id="dark-mode-toggle" class="dark-mode-button">🌙</button>
+
+    <div id="cheat-sheet">
+         <ul>
+        <li><strong>\d</strong>: Matches any digit (0-9)</li>
+        <li><strong>\D</strong>: Matches any non-digit character</li>
+        <li><strong>\w</strong>: Matches any word character (a-z, A-Z, 0-9, _)</li>
+        <li><strong>\W</strong>: Matches any non-word character</li>
+        <li><strong>\s</strong>: Matches any whitespace character (space, tab, newline)</li>
+        <li><strong>\S</strong>: Matches any non-whitespace character</li>
+        <li><strong>[abc]</strong>: Matches any character a, b, or c</li>
+        <li><strong>[^abc]</strong>: Matches any character except a, b, or c</li>
+        <li><strong>(abc)</strong>: Grouping: Matches the sequence "abc"</li>
+        <li><strong>a|b</strong>: Alternation: Matches either a or b</li>
+        <li><strong>a*</strong>: Zero or more occurrences of a</li>
+        <li><strong>a+</strong>: One or more occurrences of a</li>
+        <li><strong>a?</strong>: Zero or one occurrence of a</li>
+        <li><strong>a{3}</strong>: Exactly 3 occurrences of a</li>
+        <li><strong>a{2,4}</strong>: Between 2 and 4 occurrences of a</li>
+        <li><strong>^abc</strong>: Anchors to the start of a line</li>
+        <li><strong>abc$</strong>: Anchors to the end of a line</li>
+        <li><strong>\bword\b</strong>: Word boundary: Matches the whole word "word"</li>
+        <li><strong>\Bword\B</strong>: Non-word boundary: Matches "word" within a word</li>
+    </ul>
+    </div>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
