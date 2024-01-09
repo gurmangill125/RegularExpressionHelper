@@ -6,6 +6,32 @@ function addToHistory(regex, input) {
     historyItems.push({ regex, input });
 }
 
+// Function to perform real-time regex validation
+function validateRegex(regexInput) {
+    try {
+        new RegExp(regexInput);
+        return true; // The regex is valid
+    } catch (e) {
+        return false; // The regex is invalid
+    }
+}
+
+document.getElementById('regex-input').addEventListener('input', function() {
+    var regexInput = this.value;
+    var regexValidationMessage = document.getElementById('regex-validation-message'); // Add a message element for validation feedback
+
+    // Perform real-time regex validation
+    var isValidRegex = validateRegex(regexInput);
+
+    if (isValidRegex) {
+        regexValidationMessage.textContent = ''; // Clear the validation message
+        regexValidationMessage.classList.remove('error'); // Remove the error class
+    } else {
+        regexValidationMessage.textContent = 'Invalid regex syntax'; // Display validation error message
+        regexValidationMessage.classList.add('error'); // Add the error class for styling
+    }
+});
+
 document.getElementById('run-btn').addEventListener('click', function() {
     var regexInput = document.getElementById('regex-input').value;
     var stringInput = document.getElementById('string-input').value;
