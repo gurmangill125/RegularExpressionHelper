@@ -124,3 +124,9 @@ body.dark-mode, .dark-mode h1, .dark-mode button, .dark-mode input, .dark-mode s
     background-color: yellow; 
     font-weight: bold;
 }
+
+#performance {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
